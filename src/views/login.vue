@@ -237,6 +237,13 @@ export default {
       };
     },
     handleLogin(captchaParams) {
+      console.log("验证码参数", captchaParams);
+      this.$store.dispatch(this.loginForm.loginType === "sms" ? "SmsLogin" : "Login", this.loginForm).then(() => {
+            this.$router.push({path: this.redirect || "/"}).catch(() => {
+            });
+          }).catch(() => {
+            this.loading = false;
+          });
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true;
@@ -254,7 +261,7 @@ export default {
           }
           this.loginForm.captchaVerification = captchaParams.captchaVerification
           // 发起登陆
-          // console.log("发起登录", this.loginForm);
+          console.log("发起登录", this.loginForm);
           this.$store.dispatch(this.loginForm.loginType === "sms" ? "SmsLogin" : "Login", this.loginForm).then(() => {
             this.$router.push({path: this.redirect || "/"}).catch(() => {
             });

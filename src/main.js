@@ -74,7 +74,7 @@ import '@/styles/index.scss'
 
 // 默认点击背景不关闭弹窗
 import ElementUI from 'element-ui'
-ElementUI.Dialog.props.closeOnClickModal.default = false
+ElementUI.Dialog.props.closeOnClickModal.default = true
 
 /**
  * If you don't want to use mock-server
