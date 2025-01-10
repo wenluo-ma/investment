@@ -3,6 +3,7 @@
     <router-view />
     <theme-picker />
   </div>
+  
 </template>
 
 <script>

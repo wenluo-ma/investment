@@ -79,18 +79,17 @@ export default {
       try {
         this.formLoading = true
         if (this.cards.id) {//修改
-          this.cards.createTime = this.cards.activityTime[0]
+          this.cards.startTime = this.cards.activityTime[0]
           this.cards.endTime = this.cards.activityTime[1]
           delete this.cards.activityTime
           await researchAPI.updateCrad(this.cards)
         }
         else {//新增
-          this.cards.createTime = this.cards.activityTime[0]
+          this.cards.startTime = this.cards.activityTime[0]
           this.cards.endTime = this.cards.activityTime[1]
           delete this.cards.activityTime
           await researchAPI.createCrad(this.cards)
         }
-
       } catch (error) {
         console.log(error);
       }

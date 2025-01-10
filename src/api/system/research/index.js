@@ -15,6 +15,7 @@ export function createCrad(data) {
     data: data
   })
 }
+
 export function updateCrad(data) {
   return request({
     url: '/system/research-event/update',
@@ -32,7 +33,7 @@ export function deleteCard(data) {
 
 export function getTablePage(data) {
   return request({
-    url: '/system/research-event-meeting/get',
+    url: '/system/research-event-meeting/list',
     method: 'post',
     data: data
   })
@@ -58,4 +59,4 @@ export function deleteTable(data) {
     method: 'post',
     data: data
   })
-} 
+}

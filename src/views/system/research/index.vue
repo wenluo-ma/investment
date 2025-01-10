@@ -94,7 +94,6 @@ export default {
     handleCardClick(index, id) {
 
       this.activityId = id;
-
       //给其他卡片移除新类
       console.log('card', this.$refs.card);
       console.log('长度', this.$refs.card.length);

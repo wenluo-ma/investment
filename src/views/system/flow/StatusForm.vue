@@ -10,7 +10,7 @@
       <el-form-item label="审批意见">
         <el-input type="textarea" v-model="formData.description"></el-input>
       </el-form-item>
-      <el-form-item style="margin-left: 70%;">
+      <el-form-item style="margin-left: 60%;">
         <el-button @click="dialogVisible = false">取消</el-button>
         <el-button type="primary" @click="submitForm">确定</el-button>
       </el-form-item>
